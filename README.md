@@ -1,5 +1,88 @@
-# new_repo
+# Symbolic Math Example
 
-![image](https://github.com/tale-andrea/new_repo/assets/11681401/993f6eee-a1f1-4a5a-8b8b-3c6c02dd319c)
+Copyright 2020 The MathWorks, Inc.
 
-![image](https://github.com/tale-andrea/new_repo/assets/11681401/993f6eee-a1f1-4a5a-8b8b-3c6c02dd319c)
+```matlab:Code
+syms theta
+f = sin(theta)
+```
+
+f = 
+
+  
+$$
+ \sin \left(\theta \right)
+$$
+
+```matlab:Code
+df = diff(f,theta)
+```
+
+df = 
+
+  
+$$
+ \cos \left(\theta \right)
+$$
+
+```matlab:Code
+fplot(f)
+hold on
+fplot(df)
+hold off
+```
+
+![figure_0_png.jpg](symbolicMathExample_images/figure_0_png.jpg)
+![Alt text](_fig/image.png)
+
+
+```matlab:Code
+a = [cos(theta), -sin(theta),0,0
+    sin(theta),cos(theta),0,0
+    0,0,1,0
+    0,0,0,1]
+```
+
+a = 
+
+  
+$$
+ \left(\begin{array}{cccc}
+\cos \left(\theta \right) & -\sin \left(\theta \right) & 0 & 0\\
+\sin \left(\theta \right) & \cos \left(\theta \right) & 0 & 0\\
+0 & 0 & 1 & 0\\
+0 & 0 & 0 & 1
+\end{array}\right)
+$$
+
+```matlab:Code
+b = [1,0,0,0
+    0,0,-1,0
+    0,1,0,0
+    0,0,0,1]
+```
+
+```text:Output
+b = 4x4    
+     1     0     0     0
+     0     0    -1     0
+     0     1     0     0
+     0     0     0     1
+
+```
+
+```matlab:Code
+a*b
+```
+
+ans = 
+
+  
+$$
+ \left(\begin{array}{cccc}
+\cos \left(\theta \right) & 0 & \sin \left(\theta \right) & 0\\
+\sin \left(\theta \right) & 0 & -\cos \left(\theta \right) & 0\\
+0 & 1 & 0 & 0\\
+0 & 0 & 0 & 1
+\end{array}\right)
+$$
