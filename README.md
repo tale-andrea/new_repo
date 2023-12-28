@@ -1,3 +1,37 @@
+# TITLE
+## sub title
+### xxxx
+
+
+# Lists
+
+Here's a unordered list:
+
+   -  Item 1 
+   -  Item 2 
+   -  Item 3 
+
+Ordered list is here:
+
+   1.  Item A 
+   1.  Item B 
+   1.  Item C 
+
+# Font Styles
+
+Here are the complete list of font styles available in Live Editor: **Bold**, *Italic*, Underline, `Equispace`. And its conbinations:
+
+***BoldItalic***, **BoldUnderline**, **`BoldEquispace`**, *ItalicUnderline*, *`ItalicEquispace`*, `UnderlineEquispace`, ***BoldItalicUnderline***, ***`BoldItalicEquispace`***, **`BoldUnderlineEquispace`**, *`ItalicUnderlineEquispace`*
+
+Here we neglect the underline.
+
+# Quotation
+
+There's not corresponding function, but here centered paragraph is treated as quotation.
+
+> There's not corresponding function, but here centered paragraph is treated as quotation.
+
+
 # Symbolic Math Example
 
 Copyright 2020 The MathWorks, Inc.
@@ -14,75 +48,7 @@ $$
  \sin \left(\theta \right)
 $$
 
-```matlab:Code
-df = diff(f,theta)
-```
-
-df = 
-
-  
-$$
- \cos \left(\theta \right)
-$$
-
-```matlab:Code
-fplot(f)
-hold on
-fplot(df)
-hold off
-```
 
 ![figure_0_png.jpg](symbolicMathExample_images/figure_0_png.jpg)
 ![Alt text](_fig/image.png)
 
-
-```matlab:Code
-a = [cos(theta), -sin(theta),0,0
-    sin(theta),cos(theta),0,0
-    0,0,1,0
-    0,0,0,1]
-```
-
-a = 
-
-  
-$$
- \left(\begin{array}{cccc}
-\cos \left(\theta \right) & -\sin \left(\theta \right) & 0 & 0\\
-\sin \left(\theta \right) & \cos \left(\theta \right) & 0 & 0\\
-0 & 0 & 1 & 0\\
-0 & 0 & 0 & 1
-\end{array}\right)
-$$
-
-```matlab:Code
-b = [1,0,0,0
-    0,0,-1,0
-    0,1,0,0
-    0,0,0,1]
-```
-
-```text:Output
-b = 4x4    
-     1     0     0     0
-     0     0    -1     0
-     0     1     0     0
-     0     0     0     1
-
-```
-
-```matlab:Code
-a*b
-```
-
-ans = 
-
-  
-$$
- \left(\begin{array}{cccc}
-\cos \left(\theta \right) & 0 & \sin \left(\theta \right) & 0\\
-\sin \left(\theta \right) & 0 & -\cos \left(\theta \right) & 0\\
-0 & 1 & 0 & 0\\
-0 & 0 & 0 & 1
-\end{array}\right)
-$$
